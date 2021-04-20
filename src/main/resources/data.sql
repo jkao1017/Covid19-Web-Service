@@ -1,0 +1,1 @@
+insert into patient values (101,'Jonathan');
