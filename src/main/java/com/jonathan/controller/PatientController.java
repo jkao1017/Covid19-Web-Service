@@ -37,13 +37,13 @@ public class PatientController {
 	public String home() {
 		return "home.jsp";
 	}
-	
+	//saves patient into database
 	@PostMapping(path="/patient", consumes= {"application/json"})
 	public Patient addPatient(@RequestBody Patient patient) {
 		repo.save(patient);
 		return patient;
 	}
-	
+	//returns all patients in database
 	@GetMapping("/patients")
 	public List<Patient> getPatients(){
 		return repo.findAll();
@@ -68,8 +68,10 @@ public class PatientController {
 
 		ICsvBeanWriter writer = new CsvBeanWriter(response.getWriter(), CsvPreference.STANDARD_PREFERENCE);
 		// update csvHead columns in accordance to Patient class
-		String[] csvHead = {"ID", "Name"};
-		String[] mapping = {"id", "name"};
+		String[] csvHead = {"ID", "Name", "Sex", "Patient Type", "Date of Entry", "Date of First Symptoms", 
+							"Date of Death", "Intubed", "Pneumonia", "Age", "Pregnancy"};
+		String[] mapping = {"id", "name", "sex", "patient_Type", "date_Of_Entry", "date_Of_First_Symptoms",
+							"date_Of_Death", "intubed", "pneumonia", "age", "pregnancy"};
 		writer.writeHeader(csvHead);
 
 		for (Patient patient : listPatients) {
