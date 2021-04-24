@@ -1,1 +1,1 @@
-insert into patient values (101,'Jonathan');
+insert into patient(id, name, sex, patient_Type, date_Of_Entry,date_Of_First_Symptoms,date_Of_Death, intubed, pneumonia, age, pregnancy) values ('101f', 'Jonathan', 5, 10, '11/21/2021', '11/19/2021','11/23/2021',2,3,4,5);
