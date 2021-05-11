@@ -7,48 +7,43 @@ import javax.persistence.Id;
 public class Patient {
 	
 	@Id
-	private String id;
-	private String name;
-	private int sex;
-	private int patient_Type;
-	private String date_Of_Entry;
-	private String date_Of_First_Symptoms;
-	private String date_Of_Death;
-	private int intubed;
-	private int pneumonia;
-	private int age;
-	private int pregnancy;
+	int sex;
+	int patient_type;
+	int intubed;
+	int pneumonia;
+	int age;
+	int pregnancy;
+	int diabetes;
+	int copd;
+	int asthma;
+	int inmsupr;
+	int hypertension;
+	int other_disease;
+	int cardiovascular;
+	int obesity;
+	int renal_chronic;
+	int tobacco;
+	int contact_other_covid;
+	int covid_res;
+	int icu;
 	
-	
+	public int getCovid_res() {
+		return covid_res;
+	}
+	public void setCovid_res(int covid_res) {
+		this.covid_res = covid_res;
+	}
 	public int getSex() {
 		return sex;
 	}
 	public void setSex(int sex) {
 		this.sex = sex;
 	}
-	public int getPatient_Type() {
-		return patient_Type;
+	public int getPatient_type() {
+		return patient_type;
 	}
-	public void setPatient_Type(int patientType) {
-		this.patient_Type = patientType;
-	}
-	public String getDate_Of_Entry() {
-		return date_Of_Entry;
-	}
-	public void setDate_Of_Entry(String dateOfEntry) {
-		this.date_Of_Entry = dateOfEntry;
-	}
-	public String getDate_Of_First_Symptoms() {
-		return date_Of_First_Symptoms;
-	}
-	public void setDate_Of_First_Symptoms(String dateOfFirstSymptoms) {
-		this.date_Of_First_Symptoms = dateOfFirstSymptoms;
-	}
-	public String getDate_Of_Death() {
-		return date_Of_Death;
-	}
-	public void setDate_Of_Death(String dateOfDeath) {
-		this.date_Of_Death = dateOfDeath;
+	public void setPatient_type(int patient_type) {
+		this.patient_type = patient_type;
 	}
 	public int getIntubed() {
 		return intubed;
@@ -74,24 +69,97 @@ public class Patient {
 	public void setPregnancy(int pregnancy) {
 		this.pregnancy = pregnancy;
 	}
-	public String getId() {
-		return id;
+	public int getDiabetes() {
+		return diabetes;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setDiabetes(int diabetes) {
+		this.diabetes = diabetes;
 	}
-	public String getName() {
-		return name;
+	public int getCopd() {
+		return copd;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setCopd(int copd) {
+		this.copd = copd;
+	}
+	public int getAsthma() {
+		return asthma;
+	}
+	public void setAsthma(int asthma) {
+		this.asthma = asthma;
+	}
+	public int getInmsupr() {
+		return inmsupr;
+	}
+	public void setInmsupr(int inmsupr) {
+		this.inmsupr = inmsupr;
+	}
+	public int getHypertension() {
+		return hypertension;
+	}
+	public void setHypertension(int hypertension) {
+		this.hypertension = hypertension;
+	}
+	public int getOther_disease() {
+		return other_disease;
+	}
+	public void setOther_disease(int other_disease) {
+		this.other_disease = other_disease;
+	}
+	public int getCardiovascular() {
+		return cardiovascular;
+	}
+	public void setCardiovascular(int cardiovascular) {
+		this.cardiovascular = cardiovascular;
+	}
+	public int getObesity() {
+		return obesity;
+	}
+	public void setObesity(int obesity) {
+		this.obesity = obesity;
+	}
+	public int getRenal_chronic() {
+		return renal_chronic;
+	}
+	public void setRenal_chronic(int renal_chronic) {
+		this.renal_chronic = renal_chronic;
+	}
+	public int getTobacco() {
+		return tobacco;
+	}
+	public void setTobacco(int tobacco) {
+		this.tobacco = tobacco;
+	}
+	public int getContact_other_covid() {
+		return contact_other_covid;
+	}
+	public void setContact_other_covid(int contact_other_covid) {
+		this.contact_other_covid = contact_other_covid;
+	}
+	public int getIcu() {
+		return icu;
+	}
+	public void setIcu(int icu) {
+		this.icu = icu;
 	}
 	@Override
 	public String toString() {
-		return "Patient [id=" + id + ", name=" + name + ", sex=" + sex + ", patient_Type=" + patient_Type
-				+ ", date_Of_Entry=" + date_Of_Entry + ", date_Of_First_Symptoms=" + date_Of_First_Symptoms
-				+ ", date_Of_Death=" + date_Of_Death + ", intubed=" + intubed + ", pneumonia=" + pneumonia + ", age="
-				+ age + ", pregnancy=" + pregnancy + "]";
+		return "Patient [sex=" + sex + ", patient_type=" + patient_type + ", intubed=" + intubed + ", pneumonia="
+				+ pneumonia + ", age=" + age + ", pregnancy=" + pregnancy + ", diabetes=" + diabetes + ", copd=" + copd
+				+ ", asthma=" + asthma + ", inmsupr=" + inmsupr + ", hypertension=" + hypertension + ", other_disease="
+				+ other_disease + ", cardiovascular=" + cardiovascular + ", obesity=" + obesity + ", renal_chronic="
+				+ renal_chronic + ", tobacco=" + tobacco + ", contact_other_covid=" + contact_other_covid
+				+ ", covid_res=" + covid_res + ", icu=" + icu + ", getCovid_res()=" + getCovid_res() + ", getSex()="
+				+ getSex() + ", getPatient_type()=" + getPatient_type() + ", getIntubed()=" + getIntubed()
+				+ ", getPneumonia()=" + getPneumonia() + ", getAge()=" + getAge() + ", getPregnancy()=" + getPregnancy()
+				+ ", getDiabetes()=" + getDiabetes() + ", getCopd()=" + getCopd() + ", getAsthma()=" + getAsthma()
+				+ ", getInmsupr()=" + getInmsupr() + ", getHypertension()=" + getHypertension()
+				+ ", getOther_disease()=" + getOther_disease() + ", getCardiovascular()=" + getCardiovascular()
+				+ ", getObesity()=" + getObesity() + ", getRenal_chronic()=" + getRenal_chronic() + ", getTobacco()="
+				+ getTobacco() + ", getContact_other_covid()=" + getContact_other_covid() + ", getIcu()=" + getIcu()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
 	}
+	
+	
 
 }
