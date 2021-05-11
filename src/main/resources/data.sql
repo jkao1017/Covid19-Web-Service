@@ -1,1 +1,1 @@
-insert into patient(id, name, sex, patient_Type, date_Of_Entry,date_Of_First_Symptoms,date_Of_Death, intubed, pneumonia, age, pregnancy) values ('101f', 'Jonathan', 5, 10, '11/21/2021', '11/19/2021','11/23/2021',2,3,4,5);
+insert into patient(sex, patient_type, intubed, pneumonia, age, pregnancy,diabetes, copd, asthma, inmsupr, hypertension, other_disease, cardiovascular, obesity, renal_chronic, tobacco, contact_other_covid, covid_res, icu) values (1,2,1,2,1,2,1,2,1,2,1,1,1,2,1,2,1,2,1);
